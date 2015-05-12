@@ -17,14 +17,14 @@ class makemodule:
         if len(args) == 1:
             self.displayUsage()
         else:
-            self.writeModulesXML()
+            self.writeModuleXML()
 
     def displayUsage(self):
         print(__doc__)
         print('Usage: makemodule [module..module]\n')
         sys.exit(1)
 
-    def writeModulesXML(self):
+    def writeModuleXML(self):
         names = []
         enabled = []
         redirect = ''
