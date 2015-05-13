@@ -28,11 +28,9 @@ class makemodule:
         names = []
         enabled = []
         redirect = ''
-        cleanup = False
 
         if os.name == 'nt':
             redirect = ' > a.tmp 2>&1'
-            cleanup = True
         else:
             redirect = ' >> /dev/null 2>&1'
 
