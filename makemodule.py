@@ -67,4 +67,6 @@ class makemodule:
         f.write(doc.toprettyxml())
         f.close()
 
+        if os.name == 'nt': os.remove('a.tmp')
+
 makemodule(sys.argv)
