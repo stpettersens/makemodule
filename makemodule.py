@@ -9,6 +9,7 @@ Released under the MIT/X11 License.
 """
 import sys
 import os
+import codecs
 import xml.dom.minidom as xml
 
 class makemodule:
@@ -61,8 +62,8 @@ class makemodule:
             i = i + 1
 
         print('Writing modules.xml...')
-        f = open('modules.xml', 'w')
-        f.write(doc.toprettyxml())
+        f = codecs.open('modules.xml', 'w', encoding='utf-8-sig')
+        f.write(doc.toprettyxml(encoding='utf-8'))
         f.close()
 
         if os.name == 'nt': os.remove('a.tmp')
