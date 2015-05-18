@@ -1,4 +1,4 @@
-#!/bin/env python
+#!/usr/bin/env python
 """
 makemodule
 
@@ -62,7 +62,7 @@ class makemodule:
             i = i + 1
 
         print('Writing modules.xml...')
-        f = codecs.open('modules.xml', 'w', encoding='utf-8-sig')
+        f = codecs.open('modules.xml', 'w', 'utf-8-sig')
         f.write(doc.toprettyxml(encoding='utf-8'))
         f.close()
 
