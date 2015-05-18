@@ -1,6 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Collections;
+using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
 using System.IO;
@@ -10,13 +10,13 @@ namespace makemodule
 {
     class MakeModule
     {
-        private static ArrayList names;
-        private static ArrayList enabled;
+        private static List<string> names;
+        private static List<string> enabled;
 
         static void Main(string[] args)
         {
-            names = new ArrayList();
-            enabled = new ArrayList();
+            names = new List<string>();
+            enabled = new List<string>();
 
             if (args.Length == 0)
             {
